@@ -1,4 +1,6 @@
 class PostController < ApplicationController
+  before_action :authentice_user!, expect: [:index, :show]
+
   def index
     @post = Post.all
   end
