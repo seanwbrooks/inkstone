@@ -156,6 +156,9 @@ test:
       hosts:
         - localhost:27017
       options:
-        read:
-          mode: :primary
-        max_pool_size: 1
+        max_retries: 1
+        retry_interval: 0
+        user: 'sean_brooks'
+        password: 'Schwinn1'
+        roles:
+          - 'userAdminAnyDatabase'
