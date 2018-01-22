@@ -11,6 +11,10 @@ development:
       hosts:
         - localhost:27017
       options:
+        user: 'phiction'
+        password: '1234567890'
+        roles:
+          - 'read'
         # Change the default write concern. (default = { w: 1 })
         # write:
         #   w: 1
