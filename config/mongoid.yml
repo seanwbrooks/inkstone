@@ -11,13 +11,13 @@ development:
       hosts:
         - localhost:27017
       options:
-        user: 'phiction'
+        user: 'dbadmin'
         password: '1234567890'
         roles:
-          - 'read'
+          - 'dbOwner'
         # Change the default write concern. (default = { w: 1 })
         # write:
-        #   w: 1
+        # w: 1
 
         # Change the default read preference. Valid options for mode are: :secondary,
         # :secondary_preferred, :primary, :primary_preferred, :nearest
@@ -107,7 +107,7 @@ development:
 
 
   # Configure Mongoid specific options. (optional)
-  options:
+  # options:
     # Includes the root model name in json serialization. (default: false)
     # include_root_in_json: false
 
@@ -158,7 +158,7 @@ test:
       options:
         max_retries: 1
         retry_interval: 0
-        user: 'sean_brooks'
-        password: 'Schwinn1'
+        user: 'dbadmin_test'
+        password: '1234567890'
         roles:
-          - 'userAdminAnyDatabase'
+          - 'dbOwner'
