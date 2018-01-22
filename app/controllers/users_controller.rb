@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def index
-    @posts = db.posts.find({})
+    @posts = Post.all
   end
 end

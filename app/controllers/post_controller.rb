@@ -1,6 +1,6 @@
 class PostController < ApplicationController
   def index
-    @post = Post.find({})
+    @post = Post.all
   end
 
   def new
