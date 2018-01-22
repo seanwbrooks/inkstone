@@ -1,0 +1,7 @@
+<% if user_session %>
+  <div id="app"></div>
+<% else %>
+  <div class="row">
+    <a href="<%= new_user_session_path %>" class="button small radius">SIGN IN</a>
+  </div>
+<% end %>
